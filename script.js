@@ -88,6 +88,39 @@ document.addEventListener('DOMContentLoaded', () => {
     sr.reveal('.contact-form', { origin: 'right' });
     sr.reveal('.footer-container', { origin: 'bottom' });
 
+    // Hamburger Menu
+    const hamburger = document.querySelector('.hamburger');
+    const navUl = document.querySelector('nav ul');
+
+    if (hamburger && navUl) {
+        hamburger.addEventListener('click', () => {
+            navUl.classList.toggle('nav-active');
+
+            // Hamburger Icon Animation
+            const icon = hamburger.querySelector('i');
+            if (icon.classList.contains('fa-bars')) {
+                icon.classList.remove('fa-bars');
+                icon.classList.add('fa-times');
+            } else {
+                icon.classList.remove('fa-times');
+                icon.classList.add('fa-bars');
+            }
+        });
+
+        // Close menu when a link is clicked
+        const navLinks = document.querySelectorAll('nav ul li a');
+        navLinks.forEach(link => {
+            link.addEventListener('click', () => {
+                if (navUl.classList.contains('nav-active')) {
+                    navUl.classList.remove('nav-active');
+                    const icon = hamburger.querySelector('i');
+                    icon.classList.remove('fa-times');
+                    icon.classList.add('fa-bars');
+                }
+            });
+        });
+    }
+
     // Change title on tab visibility
     const originalTitle = document.title;
     document.addEventListener('visibilitychange', function() {

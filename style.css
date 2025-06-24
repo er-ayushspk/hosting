@@ -41,6 +41,7 @@ body.dark-mode {
 
 html {
     scroll-behavior: smooth;
+    overflow-x: hidden;
 }
 
 body {
@@ -48,6 +49,8 @@ body {
     color: var(--primary-color);
     background-color: var(--background-color);
     line-height: 1.6;
+    width: 100%;
+    overflow-x: hidden;
 }
 
 #particles-js {
@@ -131,6 +134,15 @@ nav ul li a:hover::after {
 
 nav ul li a:hover {
     color: var(--accent-color);
+}
+
+.hamburger {
+    display: none;
+    background: none;
+    border: none;
+    color: var(--primary-color);
+    font-size: 1.5rem;
+    cursor: pointer;
 }
 
 section {
@@ -451,8 +463,8 @@ h2 {
 
 .input-group input:focus,
 .input-group textarea:focus {
-    outline: none;
     border-color: var(--accent-color);
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
 }
 
 .input-group textarea {
@@ -460,10 +472,14 @@ h2 {
     resize: vertical;
 }
 
+.input-group.textarea-group i {
+    top: 1.1rem;
+    transform: none;
+}
+
 .contact-form .btn {
-    align-self: flex-end;
-    border: none;
-    padding: 1rem 2rem;
+    width: auto;
+    padding: 0.8rem 2rem;
     font-size: 1rem;
     background: linear-gradient(90deg, #5e60ce, #4338ca);
     box-shadow: 0 5px 15px rgba(94, 96, 206, 0.4);
@@ -727,6 +743,36 @@ footer {
     margin-top: 3rem;
 }
 
+@media (max-width: 992px) {
+    nav {
+        padding: 1rem 2.5%;
+    }
+    nav ul {
+        position: fixed;
+        top: 0;
+        right: -100%;
+        width: 60%;
+        height: 100vh;
+        background: var(--card-bg-color);
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        transition: right 0.5s ease-in-out;
+        box-shadow: -5px 0 15px rgba(0, 0, 0, 0.1);
+    }
+    nav ul.nav-active {
+        right: 0;
+    }
+    nav ul li {
+        margin: 2rem 0;
+    }
+    .hamburger {
+        display: block;
+        z-index: 101;
+        /* Above nav ul */
+    }
+}
+
 @media (max-width: 768px) {
     .hero-container {
         flex-direction: column;
@@ -759,8 +805,47 @@ footer {
     .contact-form {
         flex-basis: 100%;
     }
-    nav ul {
-        display: none;
+    .footer-container {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+    .footer-links h4::after,
+    .footer-contact-info h4::after {
+        left: 50%;
+        transform: translateX(-50%);
+    }
+    .footer-socials {
+        margin-bottom: 2rem;
+    }
+}
+
+@media (max-width: 480px) {
+    body {
+        font-size: 14px;
+    }
+    section {
+        padding: 4rem 5%;
+    }
+    .hero-text h1 {
+        font-size: 2.2rem;
+        min-height: 80px;
+    }
+    .hero-text p {
+        font-size: 1.2rem;
+    }
+    h2 {
+        font-size: 2rem;
+    }
+    .hero-logo {
+        max-width: 60%;
+    }
+    .skills-container,
+    .projects-container {
+        grid-template-columns: 1fr;
+    }
+    .contact-form .btn {
+        width: 100%;
     }
 }
 
