@@ -1,3 +1,19 @@
+/*
+    Hello! This is the main JavaScript file for the portfolio.
+    It handles all the interactive parts of the site. Here's a quick rundown:
+    
+    - DOMContentLoaded Listener: Most of the code runs after the initial HTML has loaded.
+        - Theme Toggle: Manages the light and dark mode functionality.
+        - Typewriter Effect: Creates the animated text in the hero section.
+        - ScrollReveal: Fades in elements as you scroll down the page.
+        - Hamburger Menu: Controls the mobile navigation.
+        - Tab Visibility: Changes the page title when the tab is not active.
+    
+    - Preloader Logic: Ensures the preloader shows for a minimum amount of time.
+    - Background Animations: Functions to create/destroy particle and starfield effects.
+    - Music Player: All the logic for the draggable music player.
+*/
+
 /* Preloader Grid Generation */
 document.addEventListener('DOMContentLoaded', () => {
     const gridLoader = document.getElementById('grid-loader');
@@ -87,39 +103,6 @@ document.addEventListener('DOMContentLoaded', () => {
     sr.reveal('.contact-image', { origin: 'left' });
     sr.reveal('.contact-form', { origin: 'right' });
     sr.reveal('.footer-container', { origin: 'bottom' });
-
-    // Hamburger Menu
-    const hamburger = document.querySelector('.hamburger');
-    const navUl = document.querySelector('nav ul');
-
-    if (hamburger && navUl) {
-        hamburger.addEventListener('click', () => {
-            navUl.classList.toggle('nav-active');
-
-            // Hamburger Icon Animation
-            const icon = hamburger.querySelector('i');
-            if (icon.classList.contains('fa-bars')) {
-                icon.classList.remove('fa-bars');
-                icon.classList.add('fa-times');
-            } else {
-                icon.classList.remove('fa-times');
-                icon.classList.add('fa-bars');
-            }
-        });
-
-        // Close menu when a link is clicked
-        const navLinks = document.querySelectorAll('nav ul li a');
-        navLinks.forEach(link => {
-            link.addEventListener('click', () => {
-                if (navUl.classList.contains('nav-active')) {
-                    navUl.classList.remove('nav-active');
-                    const icon = hamburger.querySelector('i');
-                    icon.classList.remove('fa-times');
-                    icon.classList.add('fa-bars');
-                }
-            });
-        });
-    }
 
     // Change title on tab visibility
     const originalTitle = document.title;

@@ -1,24 +1,37 @@
+<!-- 
+    Hi guys thanks for visiting my github portfolio site thannkuhh soo soo much dudes!!!
+-->
 <!DOCTYPE html>
 <html lang="en">
 
 <head>
+    <!-- Standard meta tags: character set, viewport for responsiveness, and the page title. -->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Ayush Sapkota</title>
+
+    <!-- Favicon and external stylesheets -->
+    <!-- The little icon in your browser tab. -->
     <link rel="icon" type="image/jpeg" href="images/logo1.jpg">
+    <!-- Main stylesheet for all the custom styles. -->
     <link rel="stylesheet" href="style.css">
+    <!-- Font Awesome for icons (like the social media and contact form icons). -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css">
+    <!-- Google Fonts for the 'Poppins' font family. -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
 </head>
 
 <body>
+    <!-- BACKGROUND ANIMATIONS -->
+    <!-- These divs create the animated starfield background for dark mode. -->
     <div id='star-field'>
         <div class='stars'></div>
         <div class='stars'></div>
         <div class='stars'></div>
     </div>
+    <!-- The preloader you see when the page first loads. -->
     <div id="preloader">
         <div aria-label="Orange and tan hamster running in a metal wheel" role="img" class="wheel-and-hamster">
             <div class="wheel"></div>
@@ -39,23 +52,28 @@
             <div class="spoke"></div>
         </div>
     </div>
+    <!-- This is where the particle.js animation for light mode is rendered. -->
     <div id="particles-js"></div>
 
+    <!-- HEADER & NAVIGATION -->
     <header>
         <nav>
+            <!-- Logo linking to the top of the page. -->
             <a href="#" class="logo"><img src="images/logo1.jpg" alt="Ayush Sapkota Logo"></a>
+
+            <!-- Main navigation links. -->
             <ul>
                 <li><a href="#about">About</a></li>
                 <li><a href="#skills">Skills</a></li>
                 <li><a href="#projects">Projects</a></li>
                 <li><a href="#contact">Contact</a></li>
             </ul>
-            <button class="hamburger">
-                <i class="fas fa-bars"></i>
-            </button>
+
+            <!-- Dark/Light mode theme toggle switch. -->
             <label>
                 <input class="slider" type="checkbox" id="theme-toggle">
                 <div class="switch">
+                    <!-- This is the animated part of the switch -->
                     <div class="suns"></div>
                     <div class="moons">
                         <div class="star star-1"></div>
@@ -104,14 +122,19 @@
         </nav>
     </header>
 
+    <!-- MAIN CONTENT -->
     <main>
+        <!-- HERO SECTION -->
+        <!-- This is the first thing people see. It has the main title and social links. -->
         <section id="hero">
             <div class="hero-container">
                 <div class="hero-text">
                     <div class="hero-text-content">
+                        <!-- The title has a cool typewriter effect controlled by script.js -->
                         <h1 id="hero-title"></h1>
                         <p>Coder | Builder | Innovator</p>
                     </div>
+                    <!-- Social media icons with tooltips. -->
                     <ul class="example-2">
                         <li class="icon-content">
                             <a href="https://www.facebook.com/arjun.sapkota.463771" aria-label="Facebook" data-social="facebook" target="_blank">
@@ -142,12 +165,14 @@
                         </li>
                     </ul>
                 </div>
+                <!-- The floating logo on the right side of the hero section. -->
                 <div class="hero-logo">
                     <img src="images/logo1.jpg" alt="Ayush Sapkota Logo">
                 </div>
             </div>
         </section>
 
+        <!-- ABOUT ME SECTION -->
         <section id="about">
             <h2 class="section-title">About Me</h2>
             <div class="about-container">
@@ -155,6 +180,7 @@
                     <img src="images/logo1.jpg" alt="Ayush Sapkota">
                 </div>
                 <div class="about-content">
+                    <!-- These cards give a quick overview of key strengths. -->
                     <div class="about-cards">
                         <div class="about-card">
                             <span class="card-icon-container">
@@ -182,15 +208,18 @@
             </div>
         </section>
 
+        <!-- SKILLS SECTION -->
         <section id="skills" class="skills-section">
             <h2 class="section-title">Skills & Stack</h2>
             <div class="skills-container">
+                <!-- Each "skill-card" represents a different area of expertise. -->
                 <div class="skill-card">
                     <span class="card-icon-container">
                         <i class="fas fa-globe"></i>
                     </span>
                     <h3 class="card-title">Web Development</h3>
                     <p class="card-description">HTML, CSS, JavaScript – fluent like it's my second language.</p>
+                    <!-- This button shows more info on hover. -->
                     <div class="card-info-button-container group">
                         <button class="card-info-button">
                             <i class="fas fa-info-circle"></i>
@@ -198,8 +227,8 @@
                         </button>
                         <div class="card-tooltip">
                             <div class="card-tooltip-content">
-                                <h3 class="card-tooltip-title">Core Technologies</h3>
-                                <p class="card-tooltip-text">React, Next.js, SASS, Tailwind CSS, Bootstrap, and other modern frontend frameworks.</p>
+                                <h3 class="card-tooltip-title">Frontend</h3>
+                                <p class="card-tooltip-text">Html,css and js only</p>
                             </div>
                             <div class="card-tooltip-arrow"></div>
                         </div>
@@ -230,7 +259,7 @@
                         <i class="fas fa-keyboard"></i>
                     </span>
                     <h3 class="card-title">Experience</h3>
-                    <p class="card-description">Been coding for a while now, building, breaking, and leveling up with every keystroke.</p>
+                    <p class="card-description">Been coding for a while now like 2years.</p>
                     <div class="card-info-button-container group">
                         <button class="card-info-button">
                             <i class="fas fa-info-circle"></i>
@@ -239,7 +268,7 @@
                         <div class="card-tooltip">
                             <div class="card-tooltip-content">
                                 <h3 class="card-tooltip-title">Practical Application</h3>
-                                <p class="card-tooltip-text">Extensive hands-on experience building, deploying, and maintaining real-world projects.</p>
+                                <p class="card-tooltip-text">Have work on some projects and also have take participate in some of the programs.</p>
                             </div>
                             <div class="card-tooltip-arrow"></div>
                         </div>
@@ -248,16 +277,18 @@
             </div>
         </section>
 
+        <!-- PROJECTS SECTION -->
         <section id="projects">
             <h2 class="section-title">Projects That Speak Loud</h2>
             <div class="projects-container">
+                <!-- Each "project-card" is a showcase of a specific project. -->
                 <div class="project-card">
                     <div class="card-info-icon group">
                         <i class="fas fa-info-circle"></i>
                         <div class="card-tooltip">
                             <div class="card-tooltip-content">
                                 <h3 class="card-tooltip-title">Tech Stack</h3>
-                                <p class="card-tooltip-text">Built with Next.js, Tailwind CSS, and a custom serverless backend. A high-performance, scalable solution.</p>
+                                <p class="card-tooltip-text">Built with html css,js and for bacend handeled by php</p>
                             </div>
                             <div class="card-tooltip-arrow"></div>
                         </div>
@@ -266,7 +297,7 @@
                         <i class="fas fa-bolt"></i>
                     </span>
                     <h3 class="card-title">hightps.pro</h3>
-                    <p class="card-description">A next-gen level concept currently in development.</p>
+                    <p class="card-description">A hosting site where u can get free vps.</p>
                     <a href="https://hightps.pro" target="_blank" class="btn">View Project</a>
                 </div>
                 <div class="project-card">
@@ -275,7 +306,7 @@
                         <div class="card-tooltip">
                             <div class="card-tooltip-content">
                                 <h3 class="card-tooltip-title">Tech Stack</h3>
-                                <p class="card-tooltip-text">Leverages modern cloud infrastructure for reliability and speed. Designed for seamless user experience.</p>
+                                <p class="card-tooltip-text">Built with html css,js and for bacend handeled by php.</p>
                             </div>
                             <div class="card-tooltip-arrow"></div>
                         </div>
@@ -284,7 +315,7 @@
                         <i class="fas fa-cloud"></i>
                     </span>
                     <h3 class="card-title">hexra.cloud</h3>
-                    <p class="card-description">Where the cloud meets clarity.</p>
+                    <p class="card-description">Game hosting like minecraft.</p>
                     <a href="https://hexra.cloud" target="_blank" class="btn">View Project</a>
                 </div>
                 <div class="project-card">
@@ -308,6 +339,7 @@
             </div>
         </section>
 
+        <!-- CONTACT SECTION -->
         <section id="contact">
             <h2 class="contact-title"><i class="fas fa-headset"></i> Get In Touch</h2>
             <div class="contact-container">
@@ -315,6 +347,7 @@
                     <div class="contact-image">
                         <img src="images/contact1.png" alt="Contact Illustration">
                     </div>
+                    <!-- The contact form. Currently, it doesn't send emails but is styled for looks. -->
                     <form class="contact-form" action="#" method="POST">
                         <div class="input-group">
                             <i class="fas fa-user"></i>
@@ -328,6 +361,7 @@
                             <i class="fas fa-phone"></i>
                             <input type="tel" name="phone" placeholder="Phone">
                         </div>
+
                         <div class="input-group textarea-group">
                             <i class="fas fa-comment-dots"></i>
                             <textarea name="message" placeholder="Message" required></textarea>
@@ -339,8 +373,11 @@
         </section>
 
     </main>
+
+    <!-- FOOTER -->
     <footer id="footer">
         <div class="footer-container">
+            <!-- Footer 'About Me' section -->
             <div class="footer-about">
                 <h3>Ayush Sapkota</h3>
                 <p>A passionate coder from Nepal, turning ideas into innovative web solutions. Thanks for visiting!</p>
@@ -353,6 +390,7 @@
                         <div class="filled"></div><i class="fab fa-instagram"></i></a>
                 </div>
             </div>
+            <!-- Footer navigation links -->
             <div class="footer-links">
                 <h4>Quick Links</h4>
                 <ul>
@@ -362,6 +400,7 @@
                     <li><a href="#projects">Projects</a></li>
                 </ul>
             </div>
+            <!-- Footer contact info -->
             <div class="footer-contact-info">
                 <h4>Contact Me</h4>
                 <ul>
@@ -369,17 +408,25 @@
                 </ul>
             </div>
         </div>
+        <!-- The very bottom of the footer with copyright info. -->
         <div class="footer-bottom">
             <p>&copy; 2024 Ayush Sapkota. All Rights Reserved.</p>
         </div>
     </footer>
 
+    <!-- JAVASCRIPT LIBRARIES -->
+    <!-- These are external scripts that add extra functionality. -->
     <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+    <!-- For the particle animation -->
     <script src="https://unpkg.com/scrollreveal"></script>
+    <!-- For the cool scroll animations -->
     <script src="https://unpkg.com/typeit@8.7.0/dist/index.umd.js"></script>
+    <!-- For the typewriter effect in the hero section -->
+
     <script src="script.js"></script>
 
-    <!-- Music Player -->
+    <!-- MUSIC PLAYER -->
+    <!-- A cool, draggable music player that sits on the page. -->
     <div class="music-player-container" id="musicPlayer">
         <div class="card" id="musicCard">
             <div class="one">
@@ -391,7 +438,7 @@
                 </div>
                 <span class="name" id="songTitle">Isq Di Bajiyan</span>
 
-                <!-- Progress Bar -->
+                <!-- Music progress bar -->
                 <div class="progress-container">
                     <div class="progress-bar" id="progressBar">
                         <div class="progress-fill" id="progressFill"></div>
@@ -402,6 +449,7 @@
                     </div>
                 </div>
 
+                <!-- Music player controls: previous, play/pause, next -->
                 <div class="bar">
                     <svg viewBox="0 0 16 16" class="color bi bi-skip-backward-fill" fill="currentColor" height="16" width="16" xmlns="http://www.w3.org/2000/svg" id="prevButton">
                         <path d="M.5 3.5A.5.5 0 0 0 0 4v8a.5.5 0 0 0 1 0V8.753l6.267 3.636c.54.313 1.233-.066 1.233-.697v-2.94l6.267 3.636c.54.314 1.233-.065 1.233-.696V4.308c0-.63-.693-1.01-1.233-.696L7.5 7.248v-2.94c0-.63-.692-1.01-1.233-.696L0 7.248V4z"/>
@@ -413,6 +461,7 @@
                         <path d="M15.5 3.5a.5.5 0 0 1 .5.5v8a.5.5 0 0 1-1 0V8.753l-6.267 3.636c-.54.313-1.233-.066-1.233-.697v-2.94l-6.267 3.636c-.54.314-1.233-.065-1.233-.696V4.308c0-.63-.693-1.01 1.233-.696L8.5 7.248v-2.94c0-.63.692-1.01 1.233-.696L15.5 7.248V4a.5.5 0 0 1 .5-.5z"/>
                     </svg>
                 </div>
+                <!-- Other controls: shuffle, like, volume -->
                 <div class="bar">
                     <svg viewBox="0 0 16 16" class="color1 bi bi-shuffle" fill="currentColor" height="14" width="14" xmlns="http://www.w3.org/2000/svg" id="shuffleButton">
                         <path fill-rule="evenodd" d="M0 3.5A.5.5 0 0 0 0 4v8a.5.5 0 0 0 1 0V8.753l6.267 3.636c.54.313 1.233-.066 1.233-.697v-2.94l6.267 3.636c.54.314 1.233-.065 1.233-.696V4.308c0-.63-.693-1.01-1.233-.696L7.5 7.248v-2.94c0-.63-.692-1.01-1.233-.696L0 7.248V4z"/>
@@ -428,11 +477,12 @@
                     </svg>
                 </div>
             </div>
+            <!-- These divs are for the 3D card effect. -->
             <div class="two"></div>
             <div class="three"></div>
         </div>
 
-        <!-- Hidden Audio Element -->
+        <!-- The actual HTML audio element is hidden. The player above controls it. -->
         <audio id="audioPlayer" preload="metadata">
             <source src="Music/song1.mp3" type="audio/mpeg">
             Your browser does not support the audio element. Thus is nothing dude.
