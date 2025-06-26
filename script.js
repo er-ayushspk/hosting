@@ -156,7 +156,7 @@ function createStars(numStars = 100) {
         star.style.top = `${Math.random() * 100}%`;
         star.style.left = '-10px'; // Start just off-screen
 
-        const duration = 10 + Math.random() * 15; // Animation duration between 10s and 25s
+        const duration = 10 + Math.random() * 15; //animation duration this is
         star.style.animationDuration = `${duration}s`;
         star.style.animationDelay = `${Math.random() * 20}s`; // Stagger the start
 
