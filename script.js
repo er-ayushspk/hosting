@@ -12,6 +12,7 @@
     - Preloader Logic: Ensures the preloader shows for a minimum amount of time.
     - Background Animations: Functions to create/destroy particle and starfield effects.
     - Music Player: All the logic for the draggable music player.
+    Created by Arjun Sapkota.
 */
 
 /* Preloader Grid Generation */
@@ -104,7 +105,7 @@ document.addEventListener('DOMContentLoaded', () => {
     sr.reveal('.contact-form', { origin: 'right' });
     sr.reveal('.footer-container', { origin: 'bottom' });
 
-    // Change title on tab visibility
+
     const originalTitle = document.title;
     document.addEventListener('visibilitychange', function() {
         if (document.hidden) {
